@@ -1,5 +1,5 @@
 import {initializeApp}from "firebase/app";
-import {getFirestore,serverTimestamp,collection,addDoc}from "firebase/firestore";
+import {getFirestore,serverTimestamp,collection,addDoc, getDocs,query,where,doc}from "firebase/firestore";
 import {getAuth,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,signInWithEmailAndPassword} from "firebase/auth";
 
 
@@ -14,4 +14,5 @@ const firebaseConfig = {
   const app=initializeApp(firebaseConfig);
   const firebaseAuth=getAuth(app);
   const firebaseStore=getFirestore();
-  export {app,firebaseAuth,firebaseStore,serverTimestamp,collection,addDoc,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,signInWithEmailAndPassword};
+  export {app,firebaseAuth,firebaseStore,serverTimestamp,collection,addDoc,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,
+    signInWithEmailAndPassword,getDocs,query,where,doc};

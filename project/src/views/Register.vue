@@ -17,6 +17,7 @@ function makeuser() {
     .then(async(id) => {
       await sendEmailVerification(id.user);
       console.log('success');
+      router.push("/");
     })
     .catch((error) => {
       console.log(error);

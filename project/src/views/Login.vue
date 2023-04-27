@@ -19,10 +19,9 @@ function login() {
   signInWithEmailAndPassword( firebaseAuth, info.email, info.password)
     .then(
       (userCredential) => {
-        // const user = userCredential.user;
+       
         router.push("/");
-        // console.log("user = ", user)
-        // router.push({ name: 'PostList', params: { user: user} });
+     
       },
       (error) => {
         errorFirebase.value = error.message;

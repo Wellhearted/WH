@@ -5,6 +5,8 @@ import reset from '../views/ResetPassword.vue'
 import login from '../views/Login.vue'
 import csv from '../views/Importcsv.vue'
 import adddata from '../views/AddData.vue'
+import searchby from '../views/QueryData.vue'
+
 
 
 const router = createRouter({
@@ -48,6 +50,11 @@ const router = createRouter({
       path:'/add',
       name: 'add',
       component: adddata
+    },
+    {
+      path:'/query',
+      name: 'query',
+      component: searchby
     }
 
   ]
