@@ -25,7 +25,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink to="/register">Register</RouterLink>
                </li>
         <li class="nav-item">
-          <RouterLink to="/reset">Reset passsword</RouterLink>
+          <RouterLink to="/resetpassword">Reset passsword</RouterLink>
          </li>
 
 
