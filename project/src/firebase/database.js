@@ -15,4 +15,4 @@ const firebaseConfig = {
   const firebaseAuth=getAuth(app);
   const firebaseStore=getFirestore();
   export {app,firebaseAuth,firebaseStore,serverTimestamp,collection,addDoc,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,
-    signInWithEmailAndPassword,getDocs,query,where,doc};
+    signInWithEmailAndPassword,getDocs,query,where,doc,getAuth};

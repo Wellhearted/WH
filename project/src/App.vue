@@ -1,22 +1,29 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { getAuth,firebaseAuth, } from './firebase/database';
+const authenticate=getAuth();
+const user=authenticate.currentUser;
+const nav=[];
+if (user){nav.push({key:"query",label:"Query",link:"/query"})}
 </script>
+
 
 <template>
 <header>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><img src="./logo.jpg" height="90" width=170>
+</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home
-            <span class="visually-hidden">(current)</span>
-          </a>
+          <RouterLink to="/">Home</RouterLink>
+
         </li>
         <li class="nav-item">
           <RouterLink to="/login">Login</RouterLink>
@@ -27,6 +34,15 @@ import { RouterLink, RouterView } from 'vue-router'
         <li class="nav-item">
           <RouterLink to="/resetpassword">Reset passsword</RouterLink>
          </li>
+         <li class="nav-item">
+          <RouterLink to="/add">Add Data</RouterLink>
+               </li>
+        <li class="nav-item">
+          <RouterLink to="/query">Query</RouterLink>
+         </li>
+        <li v-for="nav in log" :key="nav.key" class="nav-item">
+          <router-link v-if="nav.link" :to="nav.link">{{ nav.label }}</router-link>
+        </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-sm-2" type="search" placeholder="Search">

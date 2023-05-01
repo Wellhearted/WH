@@ -259,3 +259,10 @@ async function adddata(){
      console.log("sucess")
 }
 </script>
+<style>
+
+.form-group{
+  float:center;
+  
+}
+</style>
