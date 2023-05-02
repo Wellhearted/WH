@@ -259,10 +259,29 @@ async function adddata(){
      console.log("sucess")
 }
 </script>
-<style>
+<style scoped>
+.form-container{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transform: translate(-50%,10%);
+    padding: 40px;
+    width: 450px;
+  }
 
-.form-group{
+  .form-group{
+    margin-bottom: 15px;
+  }
+
+.record{
+    margin-top:150px;
+  }
+
+.page-title{
+    text-align: center;
+    transform: translate(-50%,10%);
+  }
+/* .form-group{
   float:center;
   
-}
+} */
 </style>
