@@ -1,13 +1,17 @@
 <template>
     <div class="container">
       <div class="text">
-          <h2>Welcome to WH. </h2>
+          <h1>Welcome to Well Hearted </h1>
           <p>We invite you to collaborate and help us raise awareness, promote better understannding, and imporve the lives of those living with Cardiomyopathy   </p>
-
+          <div class="image">
+        <img src="/homescreen/heart3.png" alt="Image">
+    </div>
         
       </div>
       <div class="image">
-          <img src="/homescreen/heart3.png" alt="Image">
+          <img src="/homescreen/heart2.png" alt="Image">
+          <div class="image">
+    </div>
       </div>
       </div>
   </template>
