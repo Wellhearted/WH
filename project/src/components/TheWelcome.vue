@@ -1,8 +1,10 @@
 <template>
     <div class="container">
       <div class="text">
-          <h2>Welcome to WH.</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit neque sed nulla imperdiet ultrices. Mauris eleifend turpis non urna malesuada, eget commodo augue vulputate.</p>
+          <h2>Welcome to WH. </h2>
+          <p>We invite you to collaborate and help us raise awareness, promote better understannding, and imporve the lives of those living with Cardiomyopathy   </p>
+
+        
       </div>
       <div class="image">
           <img src="/homescreen/heart3.png" alt="Image">
