@@ -1,7 +1,11 @@
 <template>
-
-<form>
-        <div class="form-group">
+  <div class="record">
+    <form>
+      <div class="page-title">
+      <h4>Add Data Here:</h4>
+    </div>
+    <div class="form-container">
+      <div class="form-group">
             <label>Ledv</label>
             <input v-model="ledv" type="text" class="form-control" placeholder="Ledv" required />
                   </div>
@@ -191,7 +195,9 @@
 
 <button type="button" class="btn btn-primary" @click="adddata">Submit</button>
 
-    </form>
+    </div>
+  </form>
+  </div>
 </template>
 <script setup>
 import { addDoc,collection,firebaseStore} from '../firebase/database';
@@ -259,10 +265,30 @@ async function adddata(){
      console.log("sucess")
 }
 </script>
-<style>
+<style scoped>
 
-.form-group{
+ .form-container{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transform: translate(-50%,10%);
+    padding: 40px;
+    width: 450px;
+  }
+
+  .form-group{
+    margin-bottom: 15px;
+  }
+
+.record{
+    margin-top:150px;
+  }
+
+.page-title{
+    text-align: center;
+    transform: translate(-50%,10%);
+  }
+/* .form-group{
   float:center;
   
-}
+} */
 </style>
