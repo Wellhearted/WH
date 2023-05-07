@@ -2,7 +2,7 @@
     <div class="container">
       <div class="text">
           <h1>Welcome to Well Hearted </h1>
-          <p>We invite you to collaborate and help us raise awareness, Promote better understannding, and imporve the lives of those living with Cardiomyopathy   </p>
+          <p>We invite you to collaborate and help us raise awareness, Promote better understannding, and improve the lives of those living with Cardiomyopathy   </p>
           <div class="image">
         <img src="/homescreen/heart3.png" alt="Image">
     </div>
@@ -19,6 +19,7 @@
     .container {
       display: flex;
       flex-wrap: wrap;
+      background-color: #f0f0f0;
       
       transform: translate(-50%,10%);
       }
