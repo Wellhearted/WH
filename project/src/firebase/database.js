@@ -1,5 +1,5 @@
 import {initializeApp}from "firebase/app";
-import {getFirestore,serverTimestamp,collection,addDoc, getDocs,query,where,doc}from "firebase/firestore";
+import {getFirestore,serverTimestamp,collection,addDoc, getDocs,query,where,doc,deleteDoc}from "firebase/firestore";
 import {getAuth,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,signInWithEmailAndPassword} from "firebase/auth";
 
 
@@ -15,4 +15,4 @@ const firebaseConfig = {
   const firebaseAuth=getAuth(app);
   const firebaseStore=getFirestore();
   export {app,firebaseAuth,firebaseStore,serverTimestamp,collection,addDoc,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,
-    signInWithEmailAndPassword,getDocs,query,where,doc,getAuth};
+    signInWithEmailAndPassword,getDocs,query,where,doc,getAuth,deleteDoc};
