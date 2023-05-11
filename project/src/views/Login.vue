@@ -20,7 +20,7 @@ function login() {
     .then(
       (userCredential) => {
        
-        router.push("/");
+        router.push("/dashboard");
      
       },
       (error) => {

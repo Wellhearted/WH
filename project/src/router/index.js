@@ -6,7 +6,7 @@ import login from '../views/Login.vue'
 import csv from '../views/Importcsv.vue'
 import adddata from '../views/AddData.vue'
 import searchby from '../views/QueryData.vue'
-
+import charts from '../views/Charts.vue'
 
 
 const router = createRouter({
@@ -55,6 +55,11 @@ const router = createRouter({
       path:'/query',
       name: 'query',
       component: searchby
+    },
+    {
+      path:'/dashboard',
+      name: 'dashboard',
+      component: charts
     }
 
   ]
