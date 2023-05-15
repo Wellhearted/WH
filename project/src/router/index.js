@@ -7,6 +7,7 @@ import csv from '../views/Importcsv.vue'
 import adddata from '../views/AddData.vue'
 import searchby from '../views/QueryData.vue'
 import charts from '../views/Charts.vue'
+import update from '../views/Update.vue'
 
 
 const router = createRouter({
@@ -60,6 +61,11 @@ const router = createRouter({
       path:'/dashboard',
       name: 'dashboard',
       component: charts
+    },
+    {
+      path:'/update',
+      name: 'update',
+      component: update
     }
 
   ]
