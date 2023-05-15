@@ -40,6 +40,12 @@ if (user){nav.push({key:"query",label:"Query",link:"/query"})}
         <li class="nav-item">
           <RouterLink to="/query">Query</RouterLink>
          </li>
+         <li class="nav-item">
+          <RouterLink to="/update">Update</RouterLink>
+         </li>
+         <li class="nav-item">
+          <RouterLink to="/logout">Logout</RouterLink>
+         </li>
         <li v-for="nav in log" :key="nav.key" class="nav-item">
           <router-link v-if="nav.link" :to="nav.link">{{ nav.label }}</router-link>
         </li>

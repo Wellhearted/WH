@@ -1,8 +1,33 @@
+<script setup>
+import { getAuth, firebaseAuth } from '../firebase/database';
+import { ref, onMounted } from 'vue';
+
+const userE = ref('');
+const authenticate = getAuth();
+const user = authenticate.currentUser;
+
+onMounted(() => {
+  if (user) {
+    // User is signed in
+    const email = user.email;
+    console.log("User email:", email);
+    userE.value = user.email;
+  } else {
+    // No user is signed in
+    console.log("No user signed in.");
+  }
+});
+</script>
+
+
 <template>
     <div class="container">
       <div class="text">
           <h1>Welcome to Well Hearted </h1>
-          <p>We invite you to collaborate and help us raise awareness, Promote better understannding, and improve the lives of those living with Cardiomyopathy   </p>
+          <div v-if="user">
+              <span style="color: green; font-weight: bold">{{ userE }}</span>,
+              </div>
+          <p>We invite you to collaborate and help us raise awareness, promote better understanding and improve the lives of those living with Cardiomyopathy. </p>
           <div class="image">
         <img src="/homescreen/heart3.png" alt="Image">
     </div>

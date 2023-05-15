@@ -22,8 +22,13 @@ function login() {
        
         router.push("/dashboard");
      
-      },
-      (error) => {
+      })
+.then(() =>
+      updateProfile(firebaseAuthentication.currentUser, {
+      name: info.email,
+
+    })).catch(
+          (error) => {
         errorFirebase.value = error.message;
       }
     );
