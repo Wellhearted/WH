@@ -41,10 +41,6 @@ router.push("/")
 
 
 
-
-
-
-
 <template>
      <form @submit.prevent="searchby">
     <div class="page-title">
