@@ -4,6 +4,8 @@ import { getAuth, firebaseAuth } from './firebase/database';
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 
+//let darkMode=ref(false);
+
 const router = useRouter();
 const authenticate = getAuth();
 const user = ref(authenticate.currentUser);
@@ -17,17 +19,28 @@ async function logout() {
   } catch (error) {
     console.log('Error logging out', error);
   }
+
 }
+/*
+function darkmode(){
+  darkMode.value=true;
+console.log('ANYTHING');
+}*/
+
 </script>
 
 
 
 <template>
+  <!--<div :class="{'darkmode': darkMode}">-->
+
 <header>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
+  
+
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="./logo.jpg" height="90" width=170>
+    <a class="navbar-brand" href="#"><img src="./logo.jpg" height="90" width="170">
 </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -59,11 +72,15 @@ async function logout() {
          </li>
          <form @submit.prevent="logout">
          <li class="nav-item">
-
          <button type="submit" onclick='logout()'>Logout</button>
-
-         </li>
+</li>
          </form>
+         <!--<form @submit.prevent="darkmode"> 
+         <li class="nav-item">
+         <button type="submit" onclick='darkmode'>Dark Mode</button>
+         </li>
+         </form> -->
+
         <li v-for="nav in log" :key="nav.key" class="nav-item">
           <router-link v-if="nav.link" :to="nav.link">{{ nav.label }}</router-link>
         </li>
@@ -78,6 +95,7 @@ async function logout() {
 </header>
 
   <RouterView />
+  <!--</div>-->
 </template>
 
 <style scoped>
@@ -142,6 +160,10 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 
-  
+  .darkmode {
+  background-color: #333;
+  color: #fff;
+}
+
 }
 </style>

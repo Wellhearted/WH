@@ -1,11 +1,16 @@
 <script setup>
 import { getAuth, firebaseAuth } from '../firebase/database';
 import { ref, onMounted } from 'vue';
+let darkMode=ref(false);
 
 const userE = ref('');
 const authenticate = getAuth();
 const user = authenticate.currentUser;
 
+function darkmode(){
+  darkMode.value=true;
+console.log('ANYTHING');
+}
 onMounted(() => {
   if (user) {
     // User is signed in
@@ -21,6 +26,8 @@ onMounted(() => {
 
 
 <template>
+  <div :class="{'darkmode': darkMode}">
+
     <div class="container">
       <div class="text">
           <h1>Welcome to Well Hearted </h1>
@@ -37,6 +44,12 @@ onMounted(() => {
           <img src="/homescreen/heart2.png" alt="Image">
           <div class="image">
     </div>
+    <form @submit.prevent="darkmode"> 
+         <li class="nav-item">
+         <button type="submit" onclick='darkmode'>Dark Mode</button>
+         </li>
+         </form>
+      </div>
       </div>
       </div>
   </template>
@@ -65,4 +78,15 @@ onMounted(() => {
           width: 100%;
       }
       }
+        .darkmode {
+  background-color: #333;
+  color: #fff;
+  position:relative;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
   </style>
