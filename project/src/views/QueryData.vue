@@ -24,6 +24,9 @@
 
   
 </template>
+
+
+
 <script setup>
 import { getDocs, query, where, collection, firebaseStore,deleteDoc} from '../firebase/database';
 import { ref } from 'vue'
@@ -67,6 +70,7 @@ async function deletePost() {
 
 
 </script>
+
 <style scoped>
 .form-container{
   border: 1px solid #ccc;
