@@ -15,6 +15,7 @@ updateEmail(auth.currentUser,info.email)
 router.push("/")
 
 }
+
 </script>
 
 
