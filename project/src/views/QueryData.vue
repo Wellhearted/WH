@@ -1,5 +1,6 @@
 
 <template>
+  
   <form @submit.prevent="searchby">
     <div class="page-title">
       <h4>Query Data.</h4>
@@ -9,6 +10,7 @@
           <label>Search</label>
         <input type="text" v-model="search" class="form-control" required>
         </div>
+        
         <div class="form-group">
         <button type="submit" class="btn btn-primary" onclick="searchby">Submit</button>
   <button class="btn btn-danger" @click="deletePost">Delete Post</button>
@@ -87,4 +89,5 @@ async function deletePost() {
   text-align: center;
   transform: translate(-50%,10%);
 }
+
 </style>
